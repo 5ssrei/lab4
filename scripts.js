@@ -1,5 +1,4 @@
-// 測試 JavaScript 是否正確載入
-console.log("JavaScript 載入成功");
+console.log("JavaScript 文件載入成功");
 
 // 啟動小遊戲函數
 function startQuiz(composer) {
