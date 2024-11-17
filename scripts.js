@@ -1,50 +1,66 @@
-console.log("JavaScript 文件載入成功");
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>古典音樂作曲家介紹</title>
+    <link rel="stylesheet" href="style.css"> <!-- 引入 CSS 檔案 -->
+</head>
+<body>
+    <header>
+        <h1>古典音樂作曲家</h1>
+        <p>探索世界知名的古典作曲家與他們的音樂作品。</p>
+    </header>
 
-// 啟動小遊戲函數
-function startQuiz(composer) {
-    console.log(`小遊戲啟動: ${composer}`); // 調試用
+    <main>
+        <div class="composer-grid">
+            <!-- 貝多芬 -->
+            <div class="composer-card">
+                <a href="https://www.youtube.com/results?search_query=beethoven+classical+music" target="_blank">
+                    <img src="images/beethoven.jpg" alt="貝多芬" class="composer-image">
+                </a>
+                <h2>貝多芬</h2>
+                <p>貝多芬是德國作曲家，經常被視為浪漫主義音樂的橋樑。</p>
+                <button class="quiz-btn" onclick="startQuiz('beethoven')">測試你的貝多芬知識</button>
+            </div>
 
-    const questions = {
-        beethoven: {
-            question: "貝多芬是哪個時期的作曲家？",
-            options: ["巴洛克時期", "古典時期", "浪漫時期"],
-            answer: 2,
-        },
-        mozart: {
-            question: "莫札特出生於哪個城市？",
-            options: ["維也納", "薩爾茨堡", "柏林"],
-            answer: 1,
-        },
-        chopin: {
-            question: "蕭邦的國籍是？",
-            options: ["法國", "波蘭", "奧地利"],
-            answer: 1,
-        },
-        liszt: {
-            question: "李斯特是什麼樂器的專家？",
-            options: ["小提琴", "鋼琴", "大提琴"],
-            answer: 1,
-        },
-    };
+            <!-- 莫札特 -->
+            <div class="composer-card">
+                <a href="https://www.youtube.com/results?search_query=mozart+classical+music" target="_blank">
+                    <img src="images/mozart.jpg" alt="莫札特" class="composer-image">
+                </a>
+                <h2>莫札特</h2>
+                <p>莫札特是奧地利作曲家，以其旋律和創意聞名於世。</p>
+                <button class="quiz-btn" onclick="startQuiz('mozart')">測試你的莫札特知識</button>
+            </div>
 
-    // 取得問題
-    const quiz = questions[composer];
-    if (!quiz) {
-        alert("找不到相關問題，請稍後再試！");
-        return;
-    }
+            <!-- 蕭邦 -->
+            <div class="composer-card">
+                <a href="https://www.youtube.com/results?search_query=chopin+classical+music" target="_blank">
+                    <img src="images/chopin.jpg" alt="蕭邦" class="composer-image">
+                </a>
+                <h2>蕭邦</h2>
+                <p>蕭邦是波蘭作曲家，以鋼琴作品的精湛技藝著稱。</p>
+                <button class="quiz-btn" onclick="startQuiz('chopin')">測試你的蕭邦知識</button>
+            </div>
 
-    // 顯示問題給用戶
-    const userAnswer = prompt(
-        `${quiz.question}\n\n選項：\n0: ${quiz.options[0]}\n1: ${quiz.options[1]}\n2: ${quiz.options[2]}\n\n請輸入選項編號：`
-    );
+            <!-- 李斯特 -->
+            <div class="composer-card">
+                <a href="https://www.youtube.com/results?search_query=liszt+classical+music" target="_blank">
+                    <img src="images/liszt.jpg" alt="李斯特" class="composer-image">
+                </a>
+                <h2>李斯特</h2>
+                <p>李斯特是匈牙利作曲家，被認為是鋼琴史上的一位天才。</p>
+                <button class="quiz-btn" onclick="startQuiz('liszt')">測試你的李斯特知識</button>
+            </div>
+        </div>
+    </main>
 
-    // 檢查答案
-    if (userAnswer === null) {
-        alert("遊戲已取消！");
-    } else if (parseInt(userAnswer) === quiz.answer) {
-        alert("恭喜你！答對了 🎉");
-    } else {
-        alert(`很遺憾，答錯了。\n正確答案是：${quiz.options[quiz.answer]}`);
-    }
-}
+    <footer>
+        <p>&copy; 2024 古典音樂網站</p>
+    </footer>
+
+    <!-- 將 JavaScript 引入頁面，並確保放在 body 標籤結尾處 -->
+    <script defer src="script.js"></script>
+</body>
+</html>
