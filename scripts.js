@@ -1,5 +1,4 @@
-// 搜索功能範例
-document.querySelector('#search').addEventListener('input', function () {
+tor('#search').addEventListener('input', function () {
     const query = this.value.toLowerCase();
     const items = document.querySelectorAll('ul li');
     items.forEach(item => {
