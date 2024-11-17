@@ -1,4 +1,4 @@
-// 確保函數定義在 script.js 中
+// 啟動小遊戲
 function startQuiz(composer) {
     const questions = {
         beethoven: {
@@ -23,7 +23,7 @@ function startQuiz(composer) {
         },
     };
 
-    // 根據作曲家選擇題目
+    // 取得對應作曲家的題目
     const quiz = questions[composer];
     if (!quiz) return;
 
