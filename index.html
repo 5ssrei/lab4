@@ -3,16 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>古典作曲家介紹</title>
+    <title>古典作曲家首頁</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>古典作曲家介紹</h1>
-    <h2>蕭邦</h2>
-    <p>蕭邦是波蘭作曲家，以其鋼琴作品而聞名。</p>
-    <audio controls>
-        <source src="audio/chopin_piece.mp3" type="audio/mpeg">
-        您的瀏覽器不支持音頻標籤。
-    </audio>
+    <header>
+        <h1>古典音樂作曲家</h1>
+        <p>探索音樂歷史中的偉大作曲家</p>
+    </header>
+    <main>
+        <div class="composer-grid">
+            <!-- 貝多芬 -->
+            <div class="composer-card">
+                <img src="images/beethoven.jpg" alt="貝多芬" class="composer-image" onclick="playMusic('audio/beethoven.mp3')">
+                <h2>貝多芬</h2>
+                <p>貝多芬是德國作曲家，經常被視為浪漫主義音樂的橋樑。</p>
+            </div>
+
+            <!-- 莫札特 -->
+            <div class="composer-card">
+                <img src="images/mozart.jpg" alt="莫札特" class="composer-image" onclick="playMusic('audio/mozart.mp3')">
+                <h2>莫札特</h2>
+                <p>莫札特是奧地利作曲家，以其旋律和創意聞名於世。</p>
+            </div>
+
+            <!-- 蕭邦 -->
+            <div class="composer-card">
+                <img src="images/chopin.jpg" alt="蕭邦" class="composer-image" onclick="playMusic('audio/chopin.mp3')">
+                <h2>蕭邦</h2>
+                <p>蕭邦是波蘭作曲家，以鋼琴作品的精湛技藝著稱。</p>
+            </div>
+
+            <!-- 李斯特 -->
+            <div class="composer-card">
+                <img src="images/liszt.jpg" alt="李斯特" class="composer-image" onclick="playMusic('audio/liszt.mp3')">
+                <h2>李斯特</h2>
+                <p>李斯特是匈牙利作曲家，被認為是鋼琴史上的一位天才。</p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>© 2024 古典音樂網站</p>
+    </footer>
+
+    <!-- 音樂播放器 -->
+    <audio id="music-player" hidden></audio>
+
+    <script src="scripts.js"></script>
 </body>
 </html>
