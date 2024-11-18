@@ -5,13 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>古典音樂作曲家介紹</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script defer src="script.js"></script>
+    
 </head>
 <body>
     <header>
         <h1>古典音樂作曲家</h1>
-        <p>探索偉大的古典音樂作曲家及其經典作品</p>
+        <p>探索最偉大的音樂家和他們的作品</p>
     </header>
 
     <main>
@@ -23,14 +22,49 @@
                 </a>
                 <h2>貝多芬</h2>
                 <p>貝多芬是德國作曲家，經常被視為浪漫主義音樂的橋樑。</p>
+                <p>推薦曲目:Moonlight Sonata</p>
                 <button class="quiz-btn" onclick="startQuiz('beethoven')">測試你的貝多芬知識</button>
             </div>
-            <!-- 其他作曲家... -->
+
+            <!-- 莫札特 -->
+            <div class="composer-card">
+                <a href="https://www.youtube.com/results?search_query=mozart+classical+music" target="_blank">
+                    <img src="images/mozart.jpg" alt="莫札特" class="composer-image">
+                </a>
+                <h2>莫札特</h2>
+                <p>莫札特是奧地利作曲家，以其旋律和創意聞名於世。</p>
+                <p>推薦曲目:Rondo Alla Turca </p>
+                <button class="quiz-btn" onclick="startQuiz('mozart')">測試你的莫札特知識</button>
+            </div>
+
+            <!-- 蕭邦 -->
+            <div class="composer-card">
+                <a href="https://www.youtube.com/results?search_query=chopin+classical+music" target="_blank">
+                    <img src="images/chopin.jpg" alt="蕭邦" class="composer-image">
+                </a>
+                <h2>蕭邦</h2>
+                <p>蕭邦是波蘭作曲家，以鋼琴作品的精湛技藝著稱。</p>
+                <p>推薦曲目:Fantaisie-Impromptu (Op. 66) </p>
+                <button class="quiz-btn" onclick="startQuiz('chopin')">測試你的蕭邦知識</button>
+            </div>
+
+            <!-- 李斯特 -->
+            <div class="composer-card">
+                <a href="https://www.youtube.com/results?search_query=liszt+classical+music" target="_blank">
+                    <img src="images/liszt.jpg" alt="李斯特" class="composer-image">
+                </a>
+                <h2>李斯特</h2>
+                <p>李斯特是匈牙利作曲家，被認為是鋼琴史上的一位天才。</p>
+                <p>推薦曲目:La Campanella </p>
+                <button class="quiz-btn" onclick="startQuiz('liszt')">測試你的李斯特知識</button>
+            </div>
         </div>
     </main>
 
+    <script defer src="scripts.js"></script>
+
     <footer>
-        <p>&copy; 2024 古典音樂網站</p>
+        <p>© 2024 古典音樂網站. 所有權利保留。</p>
     </footer>
 </body>
 </html>
