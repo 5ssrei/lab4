@@ -1,5 +1,9 @@
-$(document).ready(function () {
-    // 小測驗題目
+console.log("JavaScript 文件載入成功");
+
+// 啟動小遊戲函數
+function startQuiz(composer) {
+    console.log(`小遊戲啟動: ${composer}`); // 調試用
+
     const questions = {
         beethoven: {
             question: "貝多芬是哪個時期的作曲家？",
@@ -23,35 +27,24 @@ $(document).ready(function () {
         },
     };
 
-    // 啟動測驗功能
-    $(".quiz-btn").click(function () {
-        const composer = $(this).attr("onclick").match(/'([^']+)'/)[1];
-        const quiz = questions[composer];
+    // 取得問題
+    const quiz = questions[composer];
+    if (!quiz) {
+        alert("找不到相關問題，請稍後再試！");
+        return;
+    }
 
-        if (quiz) {
-            const userAnswer = prompt(
-                `${quiz.question}\n\n選項：\n0: ${quiz.options[0]}\n1: ${quiz.options[1]}\n2: ${quiz.options[2]}\n\n請輸入選項編號：`
-            );
+    // 顯示問題給用戶
+    const userAnswer = prompt(
+        `${quiz.question}\n\n選項：\n0: ${quiz.options[0]}\n1: ${quiz.options[1]}\n2: ${quiz.options[2]}\n\n請輸入選項編號：`
+    );
 
-            if (userAnswer == quiz.answer) {
-                alert("恭喜你！答對了 🎉");
-            } else {
-                alert(`很遺憾，答錯了。\n正確答案是：${quiz.options[quiz.answer]}`);
-            }
-        }
-    });
-
-    // jQuery 特效：點擊圖片後添加動畫
-    $(".composer-image").click(function () {
-        $(this).animate(
-            {
-                opacity: 0.5,
-                width: "80%",
-            },
-            500,
-            function () {
-                $(this).animate({ opacity: 1, width: "100%" }, 500);
-            }
-        );
-    });
-});
+    // 檢查答案
+    if (userAnswer === null) {
+        alert("遊戲已取消！");
+    } else if (parseInt(userAnswer) === quiz.answer) {
+        alert("恭喜你！答對了 🎉");
+    } else {
+        alert(`很遺憾，答錯了。\n正確答案是：${quiz.options[quiz.answer]}`);
+    }
+}
